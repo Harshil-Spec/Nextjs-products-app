@@ -15,6 +15,7 @@ export default async function ProductsPrismaDBPage({
 }) {
   const { query } = await searchParams;
   const products: Product[] = await getProducts(query);
+  console.log(products,"products");
 
   return <ProductDetail products={products} />;
 }

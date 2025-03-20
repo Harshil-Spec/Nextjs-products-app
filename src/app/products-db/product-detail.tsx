@@ -16,6 +16,7 @@ export const ProductDetail = ({ products }: { products: Product[] }) => {
   const [optimisticProducts, setOptimisticProducts] = useOptimistic(
     products,
     (currentProducts, productId) => {
+      console.log("products>>>>>>",products)
       return currentProducts.filter((product) => product.id !== productId);
     }
   );
